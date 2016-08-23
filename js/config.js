@@ -14,12 +14,12 @@ ENDPOINT_TYPE = "PCAPI";
 /* Access a private or a public endpoint ? (Many SAML endpoint differ depending on openess)
 * @param {bool} private_endpoint
 */
-PRIVATE_SURVEY = true;
+PRIVATE_SURVEY = false;
 
 /* Whether we are testing using local file urls instead of endpoint or not -- this will change all endpoints to local files
 * @param {bool} test
 */
-TEST = false;
+TEST = true;
 
 /* default values for endpoints -- Will return the right endpoint depednign on type (eg. WFS), test-ing or privacy settings
 * @param {bool} private_endpoints
@@ -35,7 +35,7 @@ ENDPOINTS = {
     "WFS" : {
                 // constant url pointing to local file for unit testing
                 test_url: "data/test_wfs.geojson?",
-                private_base_url:'https://dyfi.cobwebproject.eu/geoserver/cobweb/wfs?',
-                public_base_url:'https://dyfi.cobwebproject.eu/geoserver/public/wfs?'
+                private_base_url:'/geoserver/cobweb/wfs?',
+                public_base_url:'/geoserver/public/wfs?'
             }
 }
