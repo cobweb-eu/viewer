@@ -52,7 +52,9 @@ as we are still defining requirements and it is too early to use requirejs  */
                 }
             });
         }
-        layer.bindPopup(popupstr);
+        layer.bindPopup(popupstr, {
+	    maxWidth: "auto"
+	});
     }
 
     /**
@@ -104,7 +106,9 @@ as we are still defining requirements and it is too early to use requirejs  */
                         popupstr += "<b>" + k + "</b>: " + v + "<br>";
                     }
             });
-            layer.bindPopup(popupstr);
+            layer.bindPopup(popupstr, {
+		maxWidth: "auto"
+	    });
         }
     };
 
